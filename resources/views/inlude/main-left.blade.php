@@ -33,7 +33,7 @@
             </a>
           </li>
 
-          <li class="treeview" id="accounts">
+          <li class="treeview" id="accountsmenu">
             <a href="#">
               <i class="fa fa-credit-card" aria-hidden="true"></i>
               <span>Accounts</span>

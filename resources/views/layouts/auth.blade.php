@@ -35,86 +35,82 @@
   <link rel="stylesheet" href="{{asset('theme/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css')}}">
 
   <style type="text/css">
-  .content-wrapper{
-    min-height: 92.5%;
-    background-color: white;
-  }
-  .main-sidebar{padding-top: 0px;width:950px;}
-  .main-footer {
-    background-color: white;  
-  }
-  .content-wrapper, .main-footer {
-    margin-left: 950px;
-  }
-  .content-header{
-    padding-top:35%;
-    min-height:230px;
-  }
- @media (max-width:767px){
-  .content-wrapper,.main-footer{margin-left:0}
-  .content-header{
-    padding-top:0px;
-    min-height:0px;
-  }
-  .main-sidebar{width:0px;}
- }
+    .content-wrapper{
+      min-height: 92.5%;
+    }
 
- @media (min-width:768px){
-    .sidebar-collapse .content-wrapper,.sidebar-collapse .main-footer{margin-left:0}
+    .content-wrapper, .main-footer {
+      margin-left: 950px;
+      background-color: white;  
+    }
+    .content-header{
+      padding-top:35%;
+      min-height:230px;
+    }
+   @media (max-width:767px){
+    .content-wrapper,.main-footer{margin-left:0}
+    .content-header{
+      padding-top:0px;
+      min-height:0px;
+    }
     .main-sidebar{width:0px;}
+   }
 
- }
+   @media (min-width:768px){
+      .sidebar-collapse .content-wrapper,.sidebar-collapse .main-footer{margin-left:0;}
+      .main-sidebar{width:950px;}
+   }
   </style>
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
   <div class="wrapper">
   <aside class="main-sidebar">
     <section class="sidebar">
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-    <li data-target="#myCarousel" data-slide-to="1"></li>
-    <li data-target="#myCarousel" data-slide-to="2"></li>
-  </ol>
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
 
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner">
-    <div class="item active">
-      <img src="http://cdn8.openculture.com/wp-content/uploads/2015/03/22140851/lorem-2-1024x443.png" alt="Chania">
-      <div class="carousel-caption">
-        <h3>Los Angeles</h3>
-        <p>LA is always so much fun!</p>
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+          <div class="item active">
+            <img src="http://cdn8.openculture.com/wp-content/uploads/2015/03/22140851/lorem-2-1024x443.png" alt="Chania">
+            <div class="carousel-caption">
+              <h3>Los Angeles</h3>
+              <p>LA is always so much fun!</p>
+            </div>
+          </div>
+
+          <div class="item">
+            <img src="https://cdn.lrb.co.uk/blog/wp-content/uploads/2014/03/Lorem_Ipsum.jpg" alt="Chicago">
+            <div class="carousel-caption">
+              <h3>Chicago</h3>
+              <p>Thank you, Chicago!</p>
+            </div>
+          </div>
+
+          <div class="item">
+            <img src="https://www.jqueryscript.net/images/Universal-Placeholder-Text-Lorem-Ipsum-Generator-getlorem.jpg" alt="New York">
+            <div class="carousel-caption">
+              <h3>New York</h3>
+              <p>We love the Big Apple!</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+          <span class="sr-only">Next</span>
+        </a>
       </div>
-    </div>
-
-    <div class="item">
-      <img src="https://cdn.lrb.co.uk/blog/wp-content/uploads/2014/03/Lorem_Ipsum.jpg" alt="Chicago">
-      <div class="carousel-caption">
-        <h3>Chicago</h3>
-        <p>Thank you, Chicago!</p>
-      </div>
-    </div>
-
-    <div class="item">
-      <img src="https://www.jqueryscript.net/images/Universal-Placeholder-Text-Lorem-Ipsum-Generator-getlorem.jpg" alt="New York">
-      <div class="carousel-caption">
-        <h3>New York</h3>
-        <p>We love the Big Apple!</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Left and right controls -->
-  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#myCarousel" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
     </section>
   </aside>
 
@@ -127,6 +123,7 @@
     <footer class="main-footer">
       <strong>Copyright &copy; 2014-2016 
       reserved.
+      </strong>
     </footer>
   </div>
 <!-- jQuery 3 -->
@@ -166,5 +163,10 @@
 <script src="{{asset('theme/dist/js/pages/dashboard.js')}}"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="{{asset('theme/dist/js/demo.js')}}"></script>
+<script type="text/javascript">
+  $( window ).resize(function(){
+    $(".content-wrapper").removeAttr("style")
+  })
+</script>
 </body>
 </html>
