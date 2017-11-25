@@ -34,7 +34,7 @@
   <link rel="stylesheet" href="{{asset('theme/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css')}}">
 </head>
 
-<body class="hold-transition skin-blue sidebar-mini">
+<body class="hold-transition skin-yellow sidebar-mini">
   <div class="wrapper">
 
   @include('inlude.header')
@@ -52,10 +52,7 @@
     <!-- /.content-wrapper -->
 
     <footer class="main-footer">
-      <div class="pull-right hidden-xs">
-        <b>Version</b> 2.4.0
-      </div>
-      <strong>Copyright &copy; 2014-2016 <a href="https://adminlte.io">Almsaeed Studio</a>.</strong> All rights
+      <strong>Copyright &copy; 2017-2018 {{env('APP_SCHOOL')}}.</strong> All rights
       reserved.
     </footer>
     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

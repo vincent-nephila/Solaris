@@ -2,9 +2,9 @@
       <!-- Logo -->
       <a href="{{url('/')}}" class="logo">
         <!-- mini logo for sidebar mini 50x50 pixels -->
-        <span class="logo-mini"><b><i class="fa fa-question" aria-hidden="true"></i></b></span>
+        <span class="logo-mini"><b><img class='img-responsive' src="{{asset('images/logo.png')}}"></b></span>
         <!-- logo for regular state and mobile devices -->
-        <span class="logo-lg"><b>{{ config('app.name', 'Laravel') }}</b></span>
+        <span class="logo-lg"><b>{{ env('APP_SCHOOL', 'Laravel') }}</b></span>
       </a>
 
       <!-- Header Navbar: style can be found in header.less -->

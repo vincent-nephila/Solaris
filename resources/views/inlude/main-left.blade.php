@@ -25,14 +25,24 @@
         <!-- /.search form -->
         <!-- sidebar menu: : style can be found in sidebar.less -->
         <ul class="sidebar-menu" data-widget="tree">
-
           <li class="header">MAIN NAVIGATION</li>
             <li id="Dashboard">
-            <a href="#">
+            <a href="{{route('home')}}">
               <i class="fa fa-dashboard"></i> <span>Dashboard</span>
             </a>
           </li>
 
+          <!--Preregistration-->
+          <li id="preregmenu">
+            <a href="#">
+              <i class="fa fa-plus-square-o" aria-hidden="true"></i> <span>Preregistration</span>
+              <span class="pull-right-container">
+              </span>
+            </a>
+          </li>
+          <!--Preregistration-->
+
+          <!--Accounts-->
           <li class="treeview" id="accountsmenu">
             <a href="#">
               <i class="fa fa-credit-card" aria-hidden="true"></i>
@@ -41,22 +51,23 @@
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
             </a>
-          <ul class="treeview-menu">
-            <li id="accountDetails"><a href="{{url('account/details')}}"><i class="fa fa-circle-o"></i>Account Details</a></li>
-            <li id="transHistory"><a href="{{url('account/transactionhistory')}}"><i class="fa fa-circle-o"></i> Transaction History</a></li>
-          </ul>
+            <ul class="treeview-menu">
+              <li id="accountDetails"><a href="{{route('accountDetails')}}"><i class="fa fa-circle-o"></i>Account Details</a></li>
+              <li id="transHistory"><a href="{{url('account/transactionhistory')}}"><i class="fa fa-circle-o"></i> Transaction History</a></li>
+            </ul>
           </li>
+          <!--Accounts-->
 
+          <!--Grades-->
           <li id="gradesmenu">
             <a href="{{route('grade')}}">
               <i class="fa fa-file-text-o" aria-hidden="true"></i> <span>Grades</span>
-
               <span class="pull-right-container">
                 <small class="label pull-right bg-green">available</small>
               </span>
             </a>
           </li>
-
+          <!--Grades-->
         </ul>
       </section>
       <!-- /.sidebar -->
