@@ -34,8 +34,8 @@
 
           <!--Preregistration-->
           <li id="preregmenu">
-            <a href="#">
-              <i class="fa fa-plus-square-o" aria-hidden="true"></i> <span>Preregistration</span>
+            <a href="{{route('selfassess')}}">
+              <i class="fa fa-edit" aria-hidden="true"></i> <span>Assess</span>
               <span class="pull-right-container">
               </span>
             </a>

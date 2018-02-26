@@ -20,7 +20,7 @@ class DetailsController extends Controller
     	$currents = $ledgers->where('schoolyear',$sy)->groupBy('accountingcode');
 
         //Amount due computed on another function. Since, well it takes too long. Anyway suppose we should use a helper too for the computation.
-        $amountDue = $this->totaldue($ledgers);
+        $amountDue = self::totaldue($ledgers);
     	$paymentScheds = $ledgers->where('schoolyear',$sy)->where('categoryswitch','<=','6')->groupBy('duedate');
 
     	//Transaction History
@@ -31,7 +31,7 @@ class DetailsController extends Controller
     	return view('accounts.accountdetails',compact('currents','paymentScheds','others','transactions','amountDue','ledgers','sy'));
     }
 
-    function totaldue($ledgers){
+    static function totaldue($ledgers){
         $dues = $ledgers->where('duedate','<=',date('Y-m-d',strtotime(\Carbon\Carbon::now())))->where('categoryswitch','<=',6);
 
         //Variable
